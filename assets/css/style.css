@@ -17,6 +17,13 @@ header{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
 }
 
 header h1{
@@ -48,6 +55,13 @@ header nav ul li a{
     font-weight: lighter;
     font-size: 1.55vw;
 }
+
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+  }
 
 footer{
     background: #fce138;
@@ -81,7 +95,8 @@ section{
 .hero{
     background-image: url(../images/hero-bg.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: 80%;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -95,6 +110,9 @@ section{
     color: #024e76;
     width: 40%;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 80%;
+    border-radius: 15px;
 }
 
 .hero-form h3{
@@ -114,6 +132,13 @@ section{
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+
+.form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
 
 .hero-form label{
@@ -126,6 +151,11 @@ section{
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
+}
+
+.hero-form button:hover {
+    background-color: #39a6b2;  
 }
 
 .hero-cta{
@@ -141,6 +171,7 @@ section{
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 /*HERO STYLES END*/
 
@@ -176,21 +207,29 @@ section{
 }
 
 .step{
-    margin: 50px auto;
+  margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
-  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #39a6b2;
 }
 
-  .step h3 {
+.step:nth-child(even) {
+    border-bottom: 1px solid #39a6b2;
+}
+
+.step:not(:last-child) {
+    border-bottom: 1px solid #39a6b2;
+}
+
+.step h3 {
     color: #024e76;
     font-size: 46px;
     flex: 1 30%;
-  }
+}
 
   .step-info{
       flex: 2 70%;
@@ -320,7 +359,15 @@ section{
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
   }
+
+  .contact-form input:focus,
+   .contact-form textarea:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+}
 
   .contact-form button{
       width: 100%;
@@ -330,6 +377,12 @@ section{
       text-align: center;
       padding: 15px 0;
       font-size: 16px;
+      border-radius: 10px;
+  }
+
+  .contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
   }
   /* REACH OUT STYLES END*/
 
@@ -338,11 +391,13 @@ section{
     header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
       }
     
       header h1 {
         width: 100%;
         text-align: center;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
     
       header nav ul {
@@ -353,6 +408,7 @@ section{
     
       header nav ul li a {
         font-size: 20px;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
     
       footer h2, footer div {
