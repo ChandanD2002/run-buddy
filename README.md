@@ -11,6 +11,6 @@ A website that offers fitness training services.
 https://chandand2002.github.io/run-buddy/
 
 ## Contribution
-Made with ❤️ by [your name]
+Made with ❤️ by [Chandan Dhaliwal]
 
 ### ©️2019 Run Buddy, Inc
